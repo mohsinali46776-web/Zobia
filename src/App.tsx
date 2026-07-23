@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Metrics } from './components/Metrics';
@@ -56,6 +57,8 @@ export function App() {
       <CVModal isOpen={cvModalOpen} onClose={() => setCvModalOpen(false)} />
       <Dashboard isOpen={dashboardOpen} onClose={() => setDashboardOpen(false)} />
 
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
